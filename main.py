@@ -19,7 +19,8 @@ def welcome_user():
 
 welcome_user()
 
-valid_choices =['rock', 'paper', 'scissors']
+valid_choices = ['rock', 'paper', 'scissors','r','p','s']
+computer_choices = ['rock', 'paper', 'scissors']
 
 player_score = 0
 computer_score = 0
@@ -28,7 +29,7 @@ play_again = "yes"
 while play_again == "yes":
     user_choice = get_user_input(valid_choices)
     print(f"You chose: {get_emoji(user_choice)}")
-    computer_choice = get_computer_choice(valid_choices)
+    computer_choice = get_computer_choice(computer_choices)
     print(f"Computer chose: {get_emoji(computer_choice)}")
     result = determine_winner(user_choice, computer_choice)
     print(result)
