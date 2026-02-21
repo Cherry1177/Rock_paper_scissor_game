@@ -61,43 +61,43 @@ body::before {
   background: white;
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  padding: 40px;
-  max-width: 500px;
+  padding: 25px;
+  max-width: 450px;
   width: 100%;
 }
 
 h1 {
   text-align: center;
   color: #333;
-  margin-bottom: 30px;
-  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-size: 2em;
 }
 
 .scores {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 30px;
-  gap: 20px;
+  margin-bottom: 20px;
+  gap: 15px;
 }
 
 .score-box {
   flex: 1;
   background: #f0f0f0;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 
 .score-box h2 {
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #666;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .score-box p {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bold;
   color: #c1728c;
 }
@@ -105,8 +105,8 @@ h1 {
 .choices {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 30px;
-  gap: 20px;
+  margin-bottom: 20px;
+  gap: 12px;
 }
 
 .choice-section {
@@ -114,7 +114,7 @@ h1 {
   text-align: center;
   background: #f9f9f9;
   border-radius: 10px;
-  padding: 20px;
+  padding: 12px;
 }
 
 .choice-section h3 {
@@ -126,9 +126,9 @@ h1 {
 }
 
 .emoji {
-  font-size: 3em;
-  margin: 10px 0;
-  height: 60px;
+  font-size: 2.5em;
+  margin: 5px 0;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,15 +142,15 @@ h1 {
 
 .result {
   text-align: center;
-  margin-bottom: 30px;
-  height: 60px;
+  margin-bottom: 15px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #resultText {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
   color: #c1728c;
 }
@@ -169,15 +169,15 @@ h1 {
 
 .buttons {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 10px;
+  margin-bottom: 12px;
   flex-direction: column;
 }
 
 .choice-btn {
   flex: 1;
-  padding: 15px 20px;
-  font-size: 1em;
+  padding: 12px 15px;
+  font-size: 0.9em;
   border: 2px solid #c1728c;
   background: white;
   color: #c1728c;
