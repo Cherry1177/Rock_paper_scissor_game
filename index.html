@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="bgAudio" autoplay loop volume="0.3">
+      <source src="background-music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button id="muteBtn" class="mute-btn">🔊 Mute</button>
+
+    <div class="container">
+      <h1>Rock, Paper, Scissors</h1>
+
+      <div class="scores">
+        <div class="score-box">
+          <h2>Your Score</h2>
+          <p id="playerScore">0</p>
+        </div>
+        <div class="score-box">
+          <h2>Computer Score</h2>
+          <p id="computerScore">0</p>
+        </div>
+      </div>
+
+      <div class="choices">
+        <div class="choice-section">
+          <h3>Your Choice</h3>
+          <div id="playerEmoji" class="emoji">-</div>
+          <p id="playerChoice">-</p>
+        </div>
+        <div class="choice-section">
+          <h3>Computer Choice</h3>
+          <div id="computerEmoji" class="emoji">-</div>
+          <p id="computerChoice">-</p>
+        </div>
+      </div>
+
+      <div class="result">
+        <p id="resultText">Make your move!</p>
+      </div>
+
+      <div class="buttons">
+        <button class="choice-btn" data-choice="rock">✊ Rock</button>
+        <button class="choice-btn" data-choice="paper">👋 Paper</button>
+        <button class="choice-btn" data-choice="scissors">✌️ Scissors</button>
+      </div>
+
+      <button id="resetBtn" class="reset-btn">Reset Game</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

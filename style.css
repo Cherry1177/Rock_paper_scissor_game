@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("background-image.jpg") center/cover no-repeat fixed;
+  background-color: #222;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.mute-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #c1728c;
+  color: #c1728c;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.mute-btn:hover {
+  background: #c1728c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+}
+
+.mute-btn.muted {
+  background: rgba(239, 68, 68, 0.9);
+  border-color: #c1728c;
+  color: white;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.score-box {
+  flex: 1;
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.score-box h2 {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.score-box p {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #c1728c;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.choice-section {
+  flex: 1;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.choice-section h3 {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.emoji {
+  font-size: 3em;
+  margin: 10px 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choice-section p {
+  color: #333;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.result {
+  text-align: center;
+  margin-bottom: 30px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#resultText {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #c1728c;
+}
+
+.result.win #resultText {
+  color: #10b981;
+}
+
+.result.lose #resultText {
+  color: #ef4444;
+}
+
+.result.draw #resultText {
+  color: #f59e0b;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.choice-btn {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 1em;
+  border: 2px solid #c1728c;
+  background: white;
+  color: #c1728c;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.choice-btn:hover {
+  background: #c1728c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+}
+
+.choice-btn:active {
+  transform: translateY(0);
+}
+
+.reset-btn {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 0.95em;
+  background: #c1728c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reset-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+.reset-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .scores {
+    margin-bottom: 20px;
+  }
+
+  .score-box p {
+    font-size: 2em;
+  }
+
+  .emoji {
+    font-size: 2.5em;
+  }
+}
